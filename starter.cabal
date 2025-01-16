@@ -1,0 +1,66 @@
+cabal-version: 3.0
+name:          starter
+version:       0.1.0.0
+build-type:    Simple
+
+common shared-opts
+  default-language: Haskell2010
+  ghc-options:      -Wall -Werror -O2
+  build-depends:    base >=4.19 && <4.20
+
+common exec-opts
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+
+common deps-lib
+  build-depends:
+    , digest
+    , hmatrix
+
+common deps-tests
+  build-depends: silently
+
+library
+  import:          shared-opts
+  import:          deps-lib
+  hs-source-dirs:  src/lib
+
+  -- cabal-fmt: expand src/lib
+  exposed-modules: Lib
+
+executable app
+  import:         shared-opts
+  import:         exec-opts
+  build-depends:  starter
+  hs-source-dirs: src/app main/app
+  main-is:        app.hs
+
+  -- cabal-fmt: expand src/app
+  other-modules:  AppMain
+
+test-suite tests
+  import:         shared-opts
+  import:         exec-opts
+  import:         deps-tests
+  build-depends:  starter
+  type:           exitcode-stdio-1.0
+  hs-source-dirs: src/tests main/tests
+  main-is:        tests.hs
+
+  -- cabal-fmt: expand src/tests
+  other-modules:  TestsMain
+
+library dev
+  import:             shared-opts
+  import:             deps-lib
+  import:             deps-tests
+  ghc-options:        -O0 -ignore-dot-ghci -Wwarn
+  default-extensions: PartialTypeSignatures
+  hs-source-dirs:     src/app src/lib src/tests
+
+  -- cabal-fmt: expand src/app
+  -- cabal-fmt: expand src/lib
+  -- cabal-fmt: expand src/tests
+  exposed-modules:
+    AppMain
+    Lib
+    TestsMain

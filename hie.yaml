@@ -1,0 +1,12 @@
+cradle:
+  cabal:
+    - path: "./src/app/"
+      component: "starter:lib:dev"
+    - path: "./src/lib/"
+      component: "starter:lib:dev"
+    - path: "./src/tests/"
+      component: "starter:lib:dev"
+    - path: "./main/app/"
+      component: "starter:lib:dev"
+    - path: "./main/tests/"
+      component: "starter:lib:dev"
