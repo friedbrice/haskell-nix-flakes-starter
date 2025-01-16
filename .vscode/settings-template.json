@@ -1,0 +1,19 @@
+{
+  "haskell.manageHLS": "PATH",
+  "haskell.plugin.cabal-fmt.config.path": "${workspaceRoot}/.dev/bin/cabal-fmt",
+  "haskell.formattingProvider": "fourmolu",
+  "haskell.plugin.fourmolu.config.external": true,
+  "haskell.plugin.fourmolu.config.path": "${workspaceRoot}/.dev/bin/fourmolu",
+  "haskell.serverExecutablePath": "${workspaceRoot}/.dev/bin/hls",
+  "haskell.toolchain": {
+    "hls": "${workspaceRoot}/.dev/bin/hls",
+    "ghc": "${workspaceRoot}/.dev/bin/ghc",
+    "cabal": "${workspaceRoot}/.dev/bin/cabal"
+  },
+  "haskell.serverEnvironment": {
+    "PATH": "",
+    "NIX_CFLAGS_COMPILE": "",
+    "buildInputs": "",
+    "NIX_LDFLAGS": ""
+  }
+}
