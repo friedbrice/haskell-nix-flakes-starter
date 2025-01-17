@@ -37,9 +37,10 @@ Your editor will then have access to all the same environment defined in Nix she
 
 On Macos, the story is a little bit different.
 Mac GUI applications do not inherit the environment of the invoking shell.
-To get around that, the Nix shell executes a `shellHook` that symlinks your build tools into `./.dev/bin` so that you can reference those tools in your VS Code settings.
+To get around that, the Nix shell executes a `shellHook` that symlinks your build tools into `./.dev/bin` so that you can reference those tools in your editor config.
 
 In addition to that, there's still a big more configuration that Haskell Language Server relies on.
+Below is how I got it to work with VS Code.
 
 This repo includes `.vscode/settings-template.json`.
 Keep this file, but make a copy it to your own VS Code settings.
