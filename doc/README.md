@@ -43,7 +43,7 @@ In addition to that, there's still a big more configuration that Haskell Languag
 Below is how I got it to work with VS Code.
 
 This repo includes `.vscode/settings-template.json`.
-Keep this file, but make a copy it to your own VS Code settings.
+Keep this file, and make a copy it your own `.vscode/settings.json`.
 You may then modify your `.vscode/settings.json` however you like.
 Finally enter the Nix development shell.
 
