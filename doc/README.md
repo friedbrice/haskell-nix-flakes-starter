@@ -90,15 +90,15 @@ library
   build-depends: prim
 
 executable app
-  hs-source-dirs: src/app main/app
+  hs-source-dirs: main/app src/app
   main-is: app.hs
   build-depends: prim, starter
 
 test-suite tests
-  hs-source-dirs: src/tests main/tests
+  hs-source-dirs: main/tests src/tests
   main-is: tests.hs
   build-depends: prim, starter
 
 library dev
-  hs-source-dirs: src/app src/lib src/tests
+  hs-source-dirs: src/app src/lib src/prim src/tests
 ```
