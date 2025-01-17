@@ -1,5 +1,7 @@
 module AppMain where
 
+import Prim
+
 import Lib
 
 main :: IO ()

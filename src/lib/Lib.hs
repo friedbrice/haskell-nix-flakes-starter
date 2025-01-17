@@ -2,7 +2,8 @@ module Lib
     ( printRuntimeEnvironment
     ) where
 
-import Data.Foldable (for_)
+import Prim
+
 import qualified System.Environment as Env
 
 printKeyVal :: Show a => Int -> String -> a -> IO ()

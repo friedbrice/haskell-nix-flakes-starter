@@ -1,5 +1,7 @@
 module TestsMain where
 
+import Prim
+
 import Lib (printRuntimeEnvironment)
 
 import System.IO.Silently (silence)
