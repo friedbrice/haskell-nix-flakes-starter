@@ -32,8 +32,8 @@ Then refresh the Nix shell by exiting (if you are in one) and running `nix devel
 
 ## What about editor integrations
 
-On Linux, simply launch `code` from inside the Nix development shell.
-VS Code will then have access to all the same environment defined in Nix shell.
+On Linux, simply launch your editor from inside the Nix development shell.
+Your editor will then have access to all the same environment defined in Nix shell.
 
 On Macos, the story is a little bit different.
 Mac GUI applications do not inherit the environment of the invoking shell.
